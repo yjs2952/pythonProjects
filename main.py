@@ -122,7 +122,7 @@ print("""Life is too short,
 You need python""")
 
 a = "ABCDEF"
-print(a[2:4])
+print("string~~~~ :", a[2:4])
 
 a = (1, 2, 3, 4)
 print(a)
