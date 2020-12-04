@@ -7,13 +7,7 @@ input_array2 = ["0000-1111-3333-9999", "000011113333999", "-0000-1111-3333-9999-
 def solution(card_numbers):
     answer = []
     for card_number in card_numbers:
-        if not is_valid_format(card_number):
-            answer.append(0)
-            continue
-
-        card_number = card_number.replace('-', '')
-
-        if is_validated_by_luhn_formula(card_number):
+        if is_valid_format(card_number) and is_validated_by_luhn_formula(card_number.replace('-', '')):
             answer.append(1)
         else:
             answer.append(0)
@@ -41,4 +35,4 @@ def is_validated_by_luhn_formula(card_number):
     return luhn_number % 10 == 0
 
 
-print(solution(input_array2))
+print(solution(input_array))
